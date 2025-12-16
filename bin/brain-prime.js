@@ -1,4 +1,4 @@
-#!/usr/bun/evn node
+#!/usr/bin/env node
 
 import { playPrimeGame } from '../src/prime.js';
 
