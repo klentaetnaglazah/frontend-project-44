@@ -1,14 +1,31 @@
-.PHONY: install brain-games publish
+.PHONY: install brain-games brain-even brain-calc brain-gcd brain-prime brain-progression publish lint
 
-install:
-		if [ ! -f package-lock.json ]; then npm install; fi
-		npm ci
+install: package-lock.json
+	npm ci
 
-brain-games:
-		node bin/brain-games.js
+package-lock.json:
+	npm install
 
-publish:
-		npm publish --dry-run
+brain-games: install
+	node bin/brain-games.js
 
-lint:
-		npx eslint .
+brain-even: install
+	node bin/brain-even.js
+
+brain-calc: install
+	node bin/brain-calc.js
+
+brain-gcd: install
+	node bin/brain-gcd.js
+
+brain-prime: install
+	node bin/brain-prime.js
+
+brain-progression: install
+	node bin/brain-progression.js
+
+publish: install
+	npm publish --dry-run
+
+lint: install
+	npx eslint .
