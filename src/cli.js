@@ -7,6 +7,6 @@ export const greetings = () => {
   return name
 }
 
-export const askQuestion = (question) => readlineSync.question(question)
+export const askQuestion = question => readlineSync.question(question)
 
 export const checkAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer

@@ -5,18 +5,18 @@ const generateProgression = () => {
   const step = Math.floor(Math.random() * 10) + 1
   const length = Math.floor(Math.random() * 6) + 5
   const progression = []
-    
+
   for (let i = 0; i < length; i += 1) {
     progression.push(start + i * step)
   }
-    
+
   const hiddenIndex = Math.floor(Math.random() * length)
   const hiddenValue = progression[hiddenIndex]
   progression[hiddenIndex] = '..'
 
   return {
     progression: progression.join(' '),
-    hiddenValue: hiddenValue.toString()
+    hiddenValue: hiddenValue.toString(),
   }
 }
 
@@ -35,7 +35,8 @@ export const playProgressionGame = () => {
     if (userAnswer === hiddenValue) {
       console.log('Correct!')
       correctAnswers += 1
-    } else {
+    } 
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${hiddenValue}'.`)
       console.log(`Let's try again, ${name}!`)
       return

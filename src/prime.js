@@ -27,7 +27,8 @@ export const playPrimeGame = async () => {
 
     if (userAnswer.toLowerCase() === correctAnswer) {
       console.log('Correct!')
-    } else {
+    } 
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${name}!`)
       return

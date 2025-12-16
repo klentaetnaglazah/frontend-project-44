@@ -1,7 +1,7 @@
 import { greetings, askQuestion } from '../src/cli.js'
 import { getRandomNumber } from '../src/utils.js'
 
-const isEven = (number) => number % 2 === 0
+const isEven = number => number % 2 === 0
 
 export const playEvenGame = () => {
   const name = greetings()
@@ -18,7 +18,8 @@ export const playEvenGame = () => {
     if (userAnswer === correctAnswer) {
       console.log('Correct!')
       correctAnswersCount += 1
-    } else {
+    } 
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${name}!`)
       return

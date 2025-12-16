@@ -7,7 +7,7 @@ export default {
     globals: { ...globals.node },
   },
   rules: {
-    
+
   },
   ...pluginJs.configs.recommended,
 }

@@ -19,7 +19,7 @@ const runGame = (description, generateQuestionAndAnswer) => {
       return
     }
     console.log('Correct!')
-    }
+  }
 
   console.log(`Congratulations, ${name}!`)
 }
